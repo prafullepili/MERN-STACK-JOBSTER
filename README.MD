@@ -1,8 +1,5 @@
 # Jobster API
-
-#### Starter
-
-The starter is a copy of jobs-api final project, just with additional data.
+by udemy course: https://www.udemy.com/course/nodejs-tutorial-and-projects-course/
 
 #### Setup
 
