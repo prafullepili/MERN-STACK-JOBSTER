@@ -1,6 +1,8 @@
 require('dotenv').config();
 require('express-async-errors');
 const path = require('path');
+const cors = require('cors');
+
 
 // extra security packages
 const helmet = require('helmet');
@@ -18,11 +20,12 @@ const jobsRouter = require('./routes/jobs');
 // error handler
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
+const { request } = require('http');
 
 app.set('trust proxy', 1);
-
 app.use(express.static(path.resolve(__dirname, './client/build')));
 app.use(express.json());
+app.use(cors())
 app.use(helmet());
 app.use(xss());
 
